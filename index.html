@@ -1,0 +1,1689 @@
+﻿<html lang="ar">
+<head>
+<link rel="icon" href="Background-TestNet+Depin.jpg" type="Background-TestNet+Depin.jpg">
+    <title>AmineProjectTestNet+Depin=EarnMoney</title>
+    <meta charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a237e; /* ???? ???? ??? ???? */
+            --primary-dark: #0d47a1;
+            --secondary: #4cc9f0;
+            --accent: #f72585;
+            --dark: #1a1a2e;
+            --darker: #0d0d1a;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --success: #4ad66d;
+            --warning: #ffbe0b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', 'Segoe UI', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(rgba(26, 26, 46, 0.95), rgba(26, 26, 46, 0.95)), url('https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=2232&auto=format&fit=crop');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: var(--light);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ???? ?????? ?????? */
+        header {
+            background: rgba(13, 13, 26, 0.9);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(67, 97, 238, 0.2);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+        
+        .logo img {
+            height: 40px;
+            width: auto;
+            border-radius: 50%; /* ????? ?????? ?????? */
+        }
+        
+        .logo-text {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--secondary);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+        
+        .nav-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .telegram-btn {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px; /* ????? ?????? */
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(76, 201, 240, 0.3);
+            box-shadow: 0 4px 12px rgba(26, 35, 126, 0.3);
+        }
+        
+        .telegram-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(26, 35, 126, 0.5);
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+        }
+        
+        /* ????? ??????? */
+        .main-title {
+            text-align: center;
+            margin: 60px 0 40px;
+            font-size: 3rem;
+            color: var(--secondary);
+            position: relative;
+            font-weight: 700;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        }
+        
+        .main-title::after {
+            content: '';
+            display: block;
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            margin: 20px auto 0;
+            border-radius: 2px;
+            box-shadow: 0 2px 8px rgba(247, 37, 133, 0.3);
+        }
+        
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            position: relative;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 15px 25px;
+            border-radius: 50px;
+            border: none;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(5px);
+            color: white;
+            font-size: 16px;
+            padding-left: 50px;
+            border: 1px solid rgba(76, 201, 240, 0.2);
+            transition: all 0.3s;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            background: rgba(255,255,255,0.15);
+            box-shadow: 0 0 0 2px rgba(76, 201, 240, 0.3);
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* ?????? ???????? */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+        
+        .project-card {
+            background: rgba(30, 30, 60, 0.7);
+            backdrop-filter: blur(8px);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(67, 97, 238, 0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(76, 201, 240, 0.1) 0%, transparent 70%);
+            transform: rotate(30deg);
+            transition: all 0.6s;
+            opacity: 0;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-color: rgba(76, 201, 240, 0.4);
+            background: rgba(40, 40, 80, 0.8);
+        }
+        
+        .project-card:hover::before {
+            opacity: 1;
+            transform: rotate(30deg) translate(20px, 20px);
+        }
+        
+        .project-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+        }
+        
+        .project-title i {
+            font-size: 1.3rem;
+            color: var(--accent);
+            min-width: 25px;
+            text-align: center;
+        }
+        
+        .project-desc {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            min-height: 40px;
+            line-height: 1.7;
+        }
+        
+        .project-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+        }
+        
+        .project-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .project-meta i {
+            color: var(--warning);
+            font-size: 0.9rem;
+        }
+        
+        .project-link {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            text-align: center;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .project-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            transition: width 0.3s;
+            z-index: -1;
+        }
+        
+        .project-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(26, 35, 126, 0.4);
+        }
+        
+        .project-link:hover::before {
+            width: 100%;
+        }
+        
+        .ref-code {
+            background: rgba(26, 26, 46, 0.8);
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-family: 'Courier New', monospace;
+            word-break: break-all;
+            color: var(--success);
+            border: 1px dashed rgba(76, 201, 240, 0.3);
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .ref-label {
+            color: var(--gray);
+            font-size: 0.8rem;
+            margin-right: 8px;
+        }
+        
+        .copy-btn {
+            background: rgba(76, 201, 240, 0.1);
+            border: none;
+            color: var(--secondary);
+            padding: 3px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.2s;
+        }
+        
+        .copy-btn:hover {
+            background: rgba(76, 201, 240, 0.2);
+        }
+        
+        /* ????? ??????? */
+        .section-divider {
+            text-align: center;
+            margin: 70px 0;
+            position: relative;
+        }
+        
+        .section-divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(76, 201, 240, 0.3), transparent);
+            z-index: -1;
+        }
+        
+        .section-divider span {
+            background: var(--dark);
+            padding: 0 25px;
+            font-size: 1.5rem;
+            color: var(--accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-divider span::before,
+        .section-divider span::after {
+            content: '***';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--secondary);
+            font-size: 1.2rem;
+        }
+        
+        .section-divider span::before {
+            left: -15px;
+        }
+        
+        .section-divider span::after {
+            right: -15px;
+        }
+        
+        /* ????? ?????? */
+        footer {
+            background: rgba(13, 13, 26, 0.9);
+            padding: 50px 0 30px;
+            text-align: center;
+            margin-top: 80px;
+            border-top: 1px solid rgba(67, 97, 238, 0.2);
+            backdrop-filter: blur(5px);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: left;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-column h3 {
+            color: var(--secondary);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--accent);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column ul li a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: block;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--secondary);
+            transform: translateX(5px);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: var(--gray);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(30, 30, 60, 0.7);
+            border: 1px solid rgba(76, 201, 240, 0.2);
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary);
+            transform: translateY(-3px);
+            background: rgba(67, 97, 238, 0.2);
+            box-shadow: 0 5px 15px rgba(26, 35, 126, 0.3);
+        }
+        
+        .copy-right {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-top: 40px;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(76, 201, 240, 0.1);
+        }
+        
+        /* ??????? ?????? */
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0; 
+                transform: translateY(30px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .project-card {
+            animation: fadeInUp 0.6s ease forwards;
+            opacity: 0;
+            animation-delay: calc(var(--order) * 0.1s);
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        /* ????? ??????? */
+        [dir="rtl"] {
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        [dir="rtl"] .header-content,
+        [dir="rtl"] .nav-links,
+        [dir="rtl"] .project-meta,
+        [dir="rtl"] .ref-code,
+        [dir="rtl"] .footer-content {
+            flex-direction: row-reverse;
+        }
+        
+        [dir="rtl"] .nav-links a::after {
+            left: auto;
+            right: 0;
+        }
+        
+        [dir="rtl"] .search-input {
+            padding-left: 20px;
+            padding-right: 50px;
+        }
+        
+        [dir="rtl"] .search-icon {
+            left: auto;
+            right: 20px;
+        }
+        
+        [dir="rtl"] .footer-column h3::after {
+            left: auto;
+            right: 0;
+        }
+        
+        [dir="rtl"] .footer-column ul li a:hover {
+            transform: translateX(-5px);
+        }
+        
+        /* ?????? ?? ??????? ???????? */
+        @media (max-width: 1200px) {
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+            
+            .header-content {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            
+            .nav-links {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+                margin-top: 15px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.2rem;
+                margin: 40px 0 30px;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .project-card {
+                padding: 20px;
+            }
+            
+            .section-divider {
+                margin: 50px 0;
+            }
+            
+            .section-divider span {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .main-title {
+                font-size: 1.8rem;
+            }
+            
+            .logo-text {
+                font-size: 18px;
+            }
+            
+            .telegram-btn {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .search-input {
+                padding: 12px 20px 12px 40px;
+            }
+            
+            [dir="rtl"] .search-input {
+                padding: 12px 40px 12px 20px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .footer-column {
+                min-width: 100%;
+            }
+        }
+        
+        /* ???? ????? ????? */
+        .lang-switcher {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+        
+        .lang-btn {
+            background: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+            border: none;
+            font-size: 16px;
+        }
+        
+        .lang-btn:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+        
+        @media (max-width: 768px) {
+            .lang-switcher {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .lang-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 14px;
+            }
+        }
+    </style>
+<div id="uuidMachine"></div><style>@keyframes slide-in-one-tap {
+  from {
+    transform: translateY(80px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.trust-hide-gracefully {
+  opacity: 0;
+}
+
+.trust-wallet-one-tap .hidden {
+    display: none;
+  }
+
+.trust-wallet-one-tap .semibold {
+    font-weight: 500;
+  }
+
+.trust-wallet-one-tap .binance-plex {
+    font-family: 'Binance';
+  }
+
+.trust-wallet-one-tap .rounded-full {
+    border-radius: 50%;
+  }
+
+.trust-wallet-one-tap .flex {
+    display: flex;
+  }
+
+.trust-wallet-one-tap .flex-col {
+    flex-direction: column;
+  }
+
+.trust-wallet-one-tap .items-center {
+    align-items: center;
+  }
+
+.trust-wallet-one-tap .space-between {
+    justify-content: space-between;
+  }
+
+.trust-wallet-one-tap .justify-center {
+    justify-content: center;
+  }
+
+.trust-wallet-one-tap .w-full {
+    width: 100%;
+  }
+
+.trust-wallet-one-tap .box {
+    transition: all 0.5s cubic-bezier(0, 0, 0, 1.43);
+    animation: slide-in-one-tap 0.5s cubic-bezier(0, 0, 0, 1.43);
+    width: 384px;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 1020;
+  }
+
+.trust-wallet-one-tap .header {
+    gap: 15px;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 10px 18px;
+  }
+
+.trust-wallet-one-tap .header .left-items {
+      gap: 15px;
+    }
+
+.trust-wallet-one-tap .header .title {
+      color: #1e2329;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 28px;
+    }
+
+.trust-wallet-one-tap .header .subtitle {
+      color: #474d57;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+.trust-wallet-one-tap .header .close {
+      color: #1e2329;
+      cursor: pointer;
+    }
+
+.trust-wallet-one-tap .body {
+    padding: 9px 18px;
+    gap: 10px;
+  }
+
+.trust-wallet-one-tap .body .right-items {
+      gap: 10px;
+      width: 100%;
+    }
+
+.trust-wallet-one-tap .body .right-items .wallet-title {
+        color: #1e2329;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+      }
+
+.trust-wallet-one-tap .body .right-items .wallet-subtitle {
+        color: #474d57;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+.trust-wallet-one-tap .connect-indicator {
+    gap: 15px;
+    padding: 8px 0;
+  }
+
+.trust-wallet-one-tap .connect-indicator .flow-icon {
+      color: #474d57;
+    }
+
+.trust-wallet-one-tap .loading-color {
+    color: #fff;
+  }
+
+.trust-wallet-one-tap .button {
+    border-radius: 50px;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    background-color: rgb(5, 0, 255);
+    border-color: rgb(229, 231, 235);
+    cursor: pointer;
+    text-align: center;
+    height: 45px;
+  }
+
+.trust-wallet-one-tap .button .button-text {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+    }
+
+.trust-wallet-one-tap .footer {
+    margin: 20px 30px;
+  }
+
+.trust-wallet-one-tap .check-icon {
+    color: #fff;
+  }
+
+@font-face {
+  font-family: 'Binance';
+  src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-Regular.otf) format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Binance';
+  src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-Medium.otf) format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Binance';
+  src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-SemiBold.otf) format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+</style></head>
+
+
+<body dir="ltr">
+    <!-- ???? ?????? ?????? -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <img src="testnetdollar.png" alt="testnetdollar.png">
+                    <div class="logo-text">AmineProjectTestNet+Depin=EarnMoney</div>
+                </a>
+                
+                <div class="nav-links">
+                    <a href="#projects">Projects</a>
+                    <a href="#apps">Applications</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                
+                <a href="https://t.me/AmineMhamdi_21692621777" class="telegram-btn" target="_blank">
+                    <i class="fab fa-telegram"></i> Join Telegram
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- LES PROJECTS -->
+    <div class="container">
+        <h1 class="main-title" id="projects">TestNet &amp; DePin Projects</h1>
+        
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" class="search-input" placeholder="Search projects...">
+        </div>
+             <p align="center">مرحبًا بك في عالمي الرقمي!
+يسعدني انضمامك إلى مشروعي الطموح، حيث نعمل سويًا لتحقيق النجاح والتميّز في عالم الربح من الإنترنت.
+
+شارك هذا الموقع مع أصدقائك وكن جزءًا من مجتمع يطمح للربح والتألق.
+
+لا تنسَ استخدام كود الإحالة الخاص بي للحصول على مكافآت حصرية!
+كل مشاركة تقرّبك أكثر نحو تحقيق دخل إضافي وفرص مميّزة.</p>
+
+<p>Welcome to my digital world!
+I’m glad to have you here exploring my creative and rewarding projects.
+
+Share this site with your friends and be part of a community aiming for success and financial growth.
+
+Don't forget to use my referral code to earn exclusive rewards!
+Every share gets you one step closer to amazing opportunities.</p>
+        
+        <div class="projects-grid">
+<!-- Project 1 -->
+            <div class="project-card" style="--order: 1; opacity: 1;">
+                <h3 class="project-title"><i class="fas fa-project-diagram"></i> SOLIXDEPIN</h3>
+                <p class="project-desc">
+<p><h1>What is Solix?</p></h1>
+Solix is a DePIN platform that allows users to share their unused internet bandwidth and earn rewards in return. The project addresses inefficiencies in traditional internet infrastructure by creating a peer-to-peer network where users can monetize their excess bandwidth resources. Through a simple browser extension, participants can contribute to building a more equitable and efficient internet while earning SLIX Points, which may later be converted to tokens.
+
+<p><h2>Solix Airdrop Details :</p></h2>
+The Solix airdrop is currently speculative, with the project implementing a points-farming system that may lead to a token distribution. The platform allows users to accumulate SLIX Points by completing various tasks, including sharing bandwidth through their browser extension and engaging with the project’s social media channels. These points are expected to determine eligibility and allocation amounts in a potential future airdrop of SLIX tokens.
+
+Given Solix’s substantial funding of $29.5 million, primarily from the Eclip Foundation, speculation suggests this could be one of the larger airdrops in the DePIN sector. While exact distribution details are not yet confirmed, the project’s approach appears to reward early adopters and active participants who contribute to growing the network. Users can track their earned points through the Solix Dashboard, which provides transparency regarding their potential airdrop qualification.</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> Active</span>
+                    <span><i class="fas fa-coins"></i>Reward:Increase Mining Speed And Rate</span>
+                </div>
+                <a href="https://dashboard.solixdepin.net/sign-up?ref=sPmrJVQ8" class="project-link" target="_blank">Join Now</a>
+                <div class="ref-code">
+                    <span class="ref-label">Referral Code:</span>
+                    <span>sPmrJVQ8</span>
+                    <button class="copy-btn" onclick="copyToClipboard('sPmrJVQ8')">Copy</button>
+                </div>
+            </div>
+            
+<!-- Project 2 -->
+                        <div class="project-card" style="--order: 2; opacity: 1;">
+                <h3 class="project-title"><i class="fas fa-cube"></i>MEGANET</h3>
+                <p class="project-desc">
+<p><h1>What is Meganet?</p></h1>
+Meganet is a decentralized network that allows users to monetize their unused internet bandwidth. By sharing idle resources, participants can earn rewards while contributing to a more distributed internet infrastructure. The platform creates a marketplace where users can provide bandwidth and computing resources to the network in exchange for compensation.
+The project aims to build a robust peer-to-peer network where individuals can participate as nodes, helping to create a more resilient and accessible internet while being rewarded for their contributions.
+<p><h2>Meganet Airdrop Details:</p></h3>
+Meganet is currently running its Incentive Testnet Phase A, which focuses on onboarding node platform partners and establishing the foundation for their decentralized network. During this phase, participants can earn Meganet Points through various activities that will likely factor into a future token distribution.
+The airdrop details haven’t been fully announced yet, but the project has confirmed that point accumulation during the testnet will be relevant for future rewards.</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> Active</span>
+                    <span><i class="fas fa-coins"></i> Reward:Increase Mining Speed And Rate</span>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="https://meganet.app/login?refcode=SQR0G6" class="project-link" target="_blank">Join Now</a>
+                <div class="ref-code">
+                    <span class="ref-label">Referral Code:</span>
+                    <span>SQR0G6</span>
+                    <button class="copy-btn" onclick="copyToClipboard('SQR0G6')">Copy</button>
+                </div>
+            </div>
+            
+<!-- Project 3 -->
+                <div class="project-card" style="--order: 2; opacity: 1;">
+                <h3 class="project-title"><i class="fas fa-cube"></i> 3DOS</h3>
+                <p class="project-desc">
+<p><h1>What is 3DOS Network?</p></h1>
+3DOS Network is a decentralized manufacturing platform that connects global supply and demand using blockchain and AI technologies. The project aims to create the world’s largest peer-to-peer, on-demand production network, starting with 3D printing. By mapping idle production capacity worldwide, 3DOS effectively turns the internet into a virtual factory.
+
+The platform enables anyone—including brands, influencers, artists, and inventors—to upload designs, receive royalties, and have products manufactured anywhere globally within hours. This system leverages idle 3D printers and other production resources, making manufacturing more accessible while reducing waste through localized, on-demand production. 3DOS uses blockchain technology to ensure design authenticity, secure intellectual property, and automate royalty payments to creators.
+
+<p><h2>3DOS Network Airdrop Details:</p></h2>
+The 3DOS Network is currently running a confirmed airdrop campaign where participants can earn $3DOS tokens or points by completing various tasks. These points are expected to convert to actual $3DOS tokens upon the project’s token launch. The airdrop is free to join with no financial commitment required.
+
+The airdrop campaign includes several methods to earn rewards, including installing the 3DOS AI Chrome Extension, running a node, completing social tasks, and referring friends. Points are updated approximately every three hours on the dashboard, allowing participants to track their progress in real-time.</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> Active</span>
+                    <span><i class="fas fa-coins"></i> Reward:Increase Mining Speed And Rate</span>
+                </div>
+                <br>
+                <br>
+                <a href="https://dashboard.3dos.io/register?ref_code=11f888" class="project-link" target="_blank">Join Now</a>
+                <div class="ref-code">
+                    <span class="ref-label">Referral Code:</span>
+                    <span>11f888</span>
+                    <button class="copy-btn" onclick="copyToClipboard('11f888')">Copy</button>
+                </div>
+            </div>
+            
+<!-- Project 4 -->
+            <div class="project-card" style="--order: 3; opacity: 1;">
+                <h3 class="project-title"><i class="fas fa-link"></i> DEPINED</h3>
+                <p class="project-desc">
+<p><h1>What is DePINed?</p></h1>
+DePINed is an innovative decentralized protocol that revolutionizes how users can monetize their unused PC resources and internet bandwidth. Operating as a Supercloud Network, DePINed stands out by returning an impressive 85% of profits to its users through the $DePIN token. The platform creates a unique ecosystem that connects everyday users with AI and rendering companies, enabling passive income generation while contributing to advanced technological development.
+
+What sets DePINed apart is its holistic approach to decentralized physical infrastructure networks (DePIN). Unlike competitors that focus on single elements, DePINed integrates five distinct DePINs from a single PC into a comprehensive Supercloud network. This integration, combined with real-world applications for both consumers and businesses, creates a robust ecosystem that goes beyond simple resource sharing.
+
+<p><h2>DePINed Airdrop Details:</p></h2>
+DePINed has announced an inclusive airdrop campaign designed to reward early adopters and active participants in their ecosystem. The campaign features a unique point-based system where all participants have the opportunity to earn rewards. While the total reward pool will be determined during Phase 4 of the project, the airdrop stands out for its accessibility and fair distribution model.
+
+The campaign employs a sustainable reward structure that incentivizes long-term participation and community growth. Notably, the platform offers ongoing benefits through its referral system, allowing users to earn both immediate and passive rewards from their network growth.</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> Active</span>
+                    <span><i class="fas fa-coins"></i> Reward:Increase Mining Speed And Rate</span>
+                </div>
+                <a href="https://app.depined.org/dashboard" class="project-link" target="_blank">Join Now</a>
+                <div class="ref-code">
+                    <span class="ref-label">Referral Code:</span>
+                    <span>Contact On Telegram</span>
+                    <button Contact Me <a href="https://t.me/AmineMhamdi_21692621777"></button></a>
+                    <a href="https://t.me/AmineMhamdi_21692621777" class="project-link" target="_blank">Contact</a>
+                </div>
+            </div>
+        
+<!-- Project 5 -->
+            <div class="project-card" style="--order: 4; opacity: 1;">
+                <h3 class="project-title"><i class="fas fa-crown"></i>BLESS</h3>
+                <p class="project-desc">
+<p><h1>What is Bless?</p></h1>
+Bless is the world’s first shared computer, a network of everyday devices used to support AI projects and high-demand computing tasks, automatically turning users into operators and creating a circular internet economy. This means key internet infrastructure like AI inference, data processing and web-hosting won’t be in the hands of big companies with huge data centers — but in the hands of regular people, taking back control of how the internet works and who it rewards.
+
+Bless has raised $8M in funding from investors like M31 Capital and NGC Ventures and has launched a testnet campaign. Sign up for the testnet, install the extension and run the node to start earning points in the form of time. Also, earn 10% of the points from each referral. Users who collect time will likely get an airdrop if their token goes live.</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> Active</span>
+                    <span><i class="fas fa-coins"></i> Reward:Increase Mining Speed And Rate</span>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="https://bless.network/dashboard?ref=HFIIJZ" class="project-link" target="_blank">Join Now</a>
+                <div class="ref-code">
+                    <span class="ref-label">Referral Code:</span>
+                    <span>HFIIJZ</span>
+                    <button class="copy-btn" onclick="copyToClipboard('HFIIJZ')">Copy</button>
+                </div>
+            </div>
+        
+<!-- Project 6 -->
+            <div class="project-card" style="--order: 4; opacity: 1;">
+                <h3 class="project-title"><i class="fas fa-crown"></i> KAISAR</h3>
+                <p class="project-desc">
+<p><h1>What is Kaisar Network?</p></h1>
+Kaisar Network is a decentralized computing platform that allows users to contribute their device’s computational resources to power AI models. The network creates a distributed computing infrastructure where participants can monetize their idle computing power while supporting AI operations. By connecting individual devices across the globe, Kaisar Network aims to build a more accessible and efficient computing ecosystem.
+
+The project has developed the ZeroNode system, which enables users to participate in the network through a simple browser extension. With over 500,000 users already joined, Kaisar Network is establishing itself as a significant player in the distributed computing space.
+
+</p></h2>Kaisar Network Airdrop Details:</p></h2>
+Kaisar Network has launched its ZeroNode extension program, which includes a points-based reward system. Users can earn Kaisar Points through various activities and missions, with potential rewards for early participants. The project has explicitly hinted at an upcoming airdrop, with special emphasis on early verifiers who complete wallet verification.
+
+The reward structure includes daily check-in bonuses, mission completions, and referral rewards. Users can accumulate points through consistent participation and community engagement, which may factor into future token distribution.</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> Active</span>
+                    <span><i class="fas fa-coins"></i> Collect points daily up to 300 points per day with daily mining</span>
+                </div>
+                <a href="https://zero.kaisar.io/register?ref=HNlkTt979" class="project-link" target="_blank">Join Now</a>
+                <div class="ref-code">
+                    <span class="ref-label">Referral Code:</span>
+                    <span>HNlkTt979</span>
+                    <button class="copy-btn" onclick="copyToClipboard('HNlkTt979')">Copy</button>
+                </div>
+            </div>
+            
+<!-- Project 7 -->
+            <div class="project-card" style="--order: 4; opacity: 1;">
+                <h3 class="project-title"><i class="fas fa-crown"></i>FLOW3</h3>
+                <p class="project-desc">
+<p><h1>What is Flow3?</p></h1>
+Flow3 Network is a Decentralized Wireless Network that turns idle bandwidth and AI CPU power into rewards. As a DePIN, Flow3 creates a peer-to-peer ecosystem where users earn from unused resources. Simply install the app or extension to start earning Flow3 Points and convert them into lucrative incentive effortlessly.
+
+<p><h2>Key Features:</p></h2>
+
+- Optimized Connectivity: Flow3 Network strengthens internet performance through decentralized wireless infrastructure.
+- Earn from Bandwidth: Flow3 lets users monetize unused internet, turning connectivity into passive income.
+- Secure & Trustless: Decentralized proof-of-backhaul ensures transparency and protects user contributions.
+- AI-Powered Future: Flow3 supports major AI partners with scalable, decentralized infrastructure.
+
+<p><h2>Who Benefits from Flow3 Network?</p></h2>
+
+- Individuals: Earn passive income by sharing bandwidth and CPU power, with Validator Nodes offering higher rewards and secure, effortless participation.
+- Businesses: Access scalable, cost-efficient decentralized computing for AI, big data, and analytics while leveraging valuable insights and data services.
+- Communities: Improve connectivity, bridge the digital divide, and create economic opportunities through decentralized, community-driven internet solutions.
+
+<p><h2>Why Choose Flow3?</p></h2>
+
+- Revolutionizing Internet & AI Access: Flow3 Network transforms unused bandwidth and computing power into earning opportunities, creating a fairer and decentralized internet.
+- Earn Passive Income: Users monetize idle internet and AI computing, turning connectivity into a seamless income stream.
+- AI-Optimized Performance: Flow3’s AI-driven network ensures faster, smarter, and more reliable connectivity by dynamically optimizing data flow.
+- Powering AI & Data Services: Businesses benefit from secure data labeling and curation, supporting AI training and cloud infrastructure while rewarding contributors.
+- A Decentralized Digital Economy: Flow3 redistributes value, offering users higher earnings, daily withdrawals, and governance influence through Validator Nodes.</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> Active</span>
+                    <span><i class="fas fa-coins"></i> Collect points daily by daily mining</span>
+                </div>
+                <a href="https://app.flow3.tech/sale-nodes?ref=cgxufVh3LP" class="project-link" target="_blank">Join Now</a>
+                <div class="ref-code">
+                    <span class="ref-label">Referral Code:</span>
+                    <span>cgxufVh3LP</span>
+                    <button class="copy-btn" onclick="copyToClipboard('cgxufVh3LP')">Copy</button>
+                </div>
+            </div>
+            
+<!-- Project 8 -->
+            <div class="project-card" style="--order: 4; opacity: 1;">
+                <h3 class="project-title"><i class="fas fa-crown"></i>SANDWATCH</h3>
+                <p class="project-desc">
+<p><h1>What is Sandwatch?</p></h1>
+Sandwatch is a decentralized AI-powered entertainment platform built on Solana, positioning itself as the Web3 alternative to Netflix. The platform enables users to create, consume, and earn rewards through high-quality movies and shows. Using blockchain technology, Sandwatch creates a transparent ecosystem where content creators and viewers can participate in the platform’s growth through the $WATCH token.
+
+</p></h2>Sandwatch Airdrop Details:</p></h2>
+While Sandwatch has confirmed its governance and utility token $WATCH, the airdrop remains unconfirmed. The platform currently runs Season 1 of its points program, where users earn Popcorn points through various interactions. These points likely influence future $WATCH token allocations, though no official announcement has been made.</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> Active</span>
+                    <span><i class="fas fa-coins"></i> Important to enter
+Automatically collect Popcorn Points at a rate of one point per second
+Boost your position on the leaderboard or receive additional rewards, depending on current promotional programs.</span>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="https://www.sandwatch.com/" class="project-link" target="_blank">Join Now</a>
+                <div class="ref-code">
+                    <span class="ref-label">Referral Code:</span>
+                    <span>9E5754</span>
+                    <button class="copy-btn" onclick="copyToClipboard('9E5754')">Copy</button>
+                </div>
+            </div>
+            
+<!-- Project 9-->
+            <div class="project-card" style="--order: 5; opacity: 1;">
+                <h3 class="project-title"><i class="fas fa-universal-access"></i> XOS</h3>
+                <p class="project-desc">
+<p><h1>What is XOS?</p></h1>
+XOS stands as Solana’s first Layer 2 solution, bringing better scalability and performance to the Solana ecosystem. The platform addresses the growing demands of decentralized applications by providing a high-throughput infrastructure that maintains cost-effectiveness while expanding Solana’s capabilities.
+
+The protocol serves multiple sectors within the blockchain space, including GameFi, DeFi, and Web3 applications. By implementing advanced Layer 2 technology, XOS helps reduce network congestion and transaction costs while maintaining Solana’s speed advantages. This makes it particularly suitable for applications requiring high transaction volumes and real-time processing.
+
+As a Layer 2 solution, XOS processes transactions off the main Solana chain before securing them on the mainnet, creating a balance between scalability and security. This approach allows dApp developers to build more complex applications without compromising on performance or user experience.
+
+<p><h2>XOS Airdrop Details:</p></h2>
+XOS has confirmed an Early Access Airdrop program designed to reward community members who participate in the ecosystem’s growth. The program implements a points-based system where users can earn rewards through various activities, including daily check-ins, referrals, and team building.
+
+The airdrop features multiple earning mechanisms, with points being distributed based on user engagement and contribution levels. These points will be converted to XOS tokens during the Token Generation Event (TGE), with the conversion rate to be announced closer to the distribution date.
+
+XOS Network has also launched their testnet phase, providing users an opportunity to interact with the protocol before mainnet deployment.</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> Active</span>
+                    <span><i class="fas fa-coins"></i> High Reward</span>
+                </div>
+                <a href="X.ink/HSMAH7" class="project-link" target="_blank">Join Now</a>
+                <div class="ref-code">
+                    <span class="ref-label">Referral Code:</span>
+                    <span>HSMAH7</span>
+                    <button class="copy-btn" onclick="copyToClipboard('HSMAH7')">Copy</button>
+                </div>
+            </div>
+            
+<!-- Project 10 -->
+            <div class="project-card" style="--order: 5; opacity: 1;">
+                <h3 class="project-title"><i class="fas fa-universal-access"></i> UNICH</h3>
+                <p class="project-desc">
+<p><h1>What is Unich?</p></h1>
+Unich est une plateforme de trading décentralisée pour le marché de gré à gré (OTC), alimentée par une technologie d'IA de pointe. Plusieurs fonctionnalités innovantes incluent Pré-commercialisation, Point-Market, OTC Market, avec des plans pour déployer Whitelist-Market, Vesting-Market et AI Trading Assistant à l'avenir.
+
+Unich, vise à sécuriser les investissements sur le marché OTC grâce à des contrats intelligents et des frais compétitifs. Il prévoit de passer du Web2 au Web3, en mettant l'accent sur les interactions décentralisées, et vise à combler le fossé avec une plateforme d'échange.</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> Active</span>
+                    <span><i class="fas fa-coins"></i> Reward:Increase Mining Speed And Rate</span>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="https://unich.com/en/airdrop/sign-up?ref=xBmOXNXta8" class="project-link" target="_blank">Join Now</a>
+                <div class="ref-code">
+                    <span class="ref-label">Referral Code:</span>
+                    <span>xBmOXNXta8</span>
+                    <button class="copy-btn" onclick="copyToClipboard('xBmOXNXta8')">Copy</button>
+                </div>
+            </div>
+                     
+<!-- Project 11 -->
+            <div class="project-card" style="--order: 5; opacity: 1;">
+                <h3 class="project-title"><i class="fas fa-universal-access"></i> BEAMABLE</h3>
+                <p class="project-desc">
+<p><h1>What is Beamable Network?</p></h1>
+Beamable Network is a decentralized compute marketplace designed specifically for game developers and studios. It provides scalable, cost-effective backend solutions through a Decentralized Physical Infrastructure Network (DePIN) model. By replacing traditional centralized servers with community-powered nodes, Beamable enables developers to create more efficient gaming experiences.
+
+The platform integrates seamlessly with Unity and Unreal engines, offering infrastructure for multiplayer features, social systems, and monetization. This allows game developers to focus on creating engaging gameplay without building complex backend systems from scratch.
+
+Beamable addresses significant pain points in the gaming industry. Traditional game infrastructure can cost upwards of $150,000 to start and requires months of setup. By providing a decentralized solution, Beamable makes game development more accessible and efficient while supporting the integration of Web3 features.
+
+<p><h2>Beamable Network Airdrop Details:</p></h2>
+Beamable Network has launched a points-based campaign that may lead to a retrospective airdrop following their Token Generation Event (TGE). The project has established a rewards system where users can earn points by completing various tasks.
+
+The airdrop will be tied to their native token, $BEAM, which has a maximum supply of 1,000,000,000 tokens. According to available tokenomics information, the TGE is expected in the second half of 2025, with specific allocations for community incentives including airdrops.
+
+Participants who accumulate more points in the Beamable Network Hub may receive larger allocations in a potential airdrop. The project is backed by notable investors including BITKRAFT Ventures and Polygon Ventures, having raised $13.5 million in Series A funding, which adds credibility to the potential value of any future token distribution.</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> Active</span>
+                    <span><i class="fas fa-coins"></i> Hight Reward</span>
+                </div>
+                <a href="https://hub.beamable.network/ref/QWGZ62EV" class="project-link" target="_blank">Join Now</a>
+                <div class="ref-code">
+                    <span class="ref-label">Referral Code:</span>
+                    <span>QWGZ62EV</span>
+                    <button class="copy-btn" onclick="copyToClipboard('QWGZ62EV')">Copy</button>
+                </div>
+            </div>   
+            
+<!-- Project 12 -->
+            <div class="project-card" style="--order: 5; opacity: 1;">
+                <h3 class="project-title"><i class="fas fa-universal-access"></i>HUMANITY PROTOCOL</h3>
+                <p class="project-desc">
+<p><h1>What is Humanity Protocol?</p></h1>
+Humanity Protocol harnesses the latest in non-invasive biometrics and Proof-of-Humanity technology to create a world where decentralization, personal identity ownership, equity, and inclusion aren’t just ideals—they’re reality. Humanity Protocol’s Proof of Humanity (PoH) solution verifies that an individual is who they claim to be online without needing them to disclose any personally identifiable information.
+
+<p><h2>Humanity Protocol airdrop details:</p></h2>
+Humanity Protocol has raised $30M in funding from investors like Animoca Brands and Hashed Fund and has launched a testnet campaign. Sign up for the testnet and register your Human ID to be eligible for airdrop. Also refer your friends to increase your rewards.
+
+Users can now link their social media accounts for up to a 60% boost. Head to “connect social media” to link your accounts.</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> Active</span>
+                    <span><i class="fas fa-coins"></i> Reward:Increase Mining Speed And Rate</span>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="testnet.humanity.org/login?ref=aminemhamdi" class="project-link" target="_blank">Join Now</a>
+                <div class="ref-code">
+                    <span class="ref-label">Referral Code:</span>
+                    <span>aminemhamdi</span>
+                    <button class="copy-btn" onclick="copyToClipboard('aminemhamdi')">Copy</button>
+                </div>
+            </div>   
+            
+<!-- Project 13 -->
+            <div class="project-card" style="--order: 5; opacity: 1;">
+                <h3 class="project-title"><i class="fas fa-universal-access"></i>GWAY </h3>
+                <p class="project-desc">Universal blockchain access platform with cross-chain capabilities</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> Active</span>
+                    <span><i class="fas fa-coins"></i> High Reward</span>
+                </div>
+                <a href="https://gway.ai?ref=3Y317ISWK4" class="project-link" target="_blank">Join Now</a>
+                <div class="ref-code">
+                    <span class="ref-label">Referral Code:</span>
+                    <span>3Y317ISWK4</span>
+                    <button class="copy-btn" onclick="copyToClipboard('3Y317ISWK4')">Copy</button>
+                </div>
+            </div>   
+            
+<!-- Project 14 -->
+            <div class="project-card" style="--order: 5; opacity: 1;">
+                <h3 class="project-title"><i class="fas fa-universal-access"></i>DREAMER QUESTS</h3>
+                <p class="project-desc">Universal blockchain access platform with cross-chain capabilities</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> Active</span>
+                    <span><i class="fas fa-coins"></i> High Reward</span>
+                </div>
+                <a href="https://dreamerquests.partofdream.io/login?referralCodeForPOD=9556ee79" class="project-link" target="_blank">Join Now</a>
+                <div class="ref-code">
+                    <span class="ref-label">Referral Code:</span>
+                    <span>9556ee79</span>
+                    <button class="copy-btn" onclick="copyToClipboard('9556ee79')">Copy</button>
+                </div>
+            </div>   
+            
+<!-- Project 15 -->
+            <div class="project-card" style="--order: 5; opacity: 1;">
+                <h3 class="project-title"><i class="fas fa-universal-access"></i>LIFTOFF.MONSTER-LIQUID OXYGEN</h3>
+                <p class="project-desc">
+<p><h1>What is LOX (Liquid Oxygen)?</p></h1>
+LiftOff.Monster is a decentralized launchpad designed for token creators, liquidity providers, and users within the blockchain ecosystem. The platform aims to democratize access to token launches by providing a secure environment where blockchain projects can connect with potential investors. LiftOff.Monster focuses on creating a sustainable ecosystem that prioritizes community engagement and growth.
+
+Liquid Oxygen (LOX) is the utility token of LiftOff Monster. LOX underpins a self-sustaining ecosystem focused on community participation, decentralization, and long-term growth.
+
+<p><h2>LOX Airdrop Details:</p></h2>
+LiftOff Monster is currently hosting the Cosmic Monster Airdrop campaign. The airdrop offers the community members the chance to earn allocation tickets that convert into LOX token rewards. The total prize pool consists of 223,026,400 LOX tokens that will be distributed among qualified participants.
+
+The airdrop operates on a ticket-based system where users earn tickets by completing various social engagement tasks. Each ticket improves your chances of receiving a larger allocation from the prize pool. As of now, over 17,661 participants have successfully secured their whitelist status, confirming their eligibility for the upcoming token distribution.</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> Active</span>
+                    <span><i class="fas fa-coins"></i> High Reward</span>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="https://airdrop.liftoff.monster?ref=NLKSFH1Z" class="project-link" target="_blank">Join Now</a>
+                <div class="ref-code">
+                    <span class="ref-label">Referral Code:</span>
+                    <span>NLKSFH1Z</span>
+                    <button class="copy-btn" onclick="copyToClipboard('NLKSFH1Z')">Copy</button>
+                </div>
+            </div> 
+         
+<!-- Project 16 -->
+            <div class="project-card" style="--order: 6; opacity: 1;">
+                <h3 class="project-title"><i class="fas fa-dream"></i> BILLIONS</h3>
+                <p class="project-desc">
+<p><h1>What is Billions Network?</p></h1>
+Billions Network is a privacy-focused digital identity platform designed to verify both human and AI identities without relying on biometric data. The platform utilizes zero-knowledge proofs, a sophisticated cryptographic method that allows for verification of information without revealing the underlying data, ensuring both security and privacy for its users.
+
+At its core, Billions Network aims to establish a “universal human and AI network” that enhances digital identity verification while fostering trust between humans and AI systems. Beyond identity verification, the platform targets global financial inclusion by leveraging blockchain technology to provide access to financial services without traditional intermediaries like banks, effectively bridging the gap between traditional finance and decentralized finance (DeFi).
+
+<p><h2>Billions Network Airdrop Details:</p></h2>
+Billions Network is currently conducting an airdrop campaign to grow its community and reward early supporters. Participants can earn “POWER points” by completing simple tasks such as signing up with an email, connecting an Ethereum wallet, following the project on social media, and referring friends. The campaign is free to join and takes approximately two minutes to complete.
+
+This airdrop appears to be part of the project’s strategy to build a user base before a potential token launch. While specific reward structures have not been officially announced, early participation could position users for future token distributions as the project develops further. The airdrop serves as an opportunity to gain early access to what could become a significant player in the digital identity and financial inclusion space.</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> Active</span>
+                    <span><i class="fas fa-coins"></i> Hight Reward</span>
+                </div>
+                <a href="https://signup.billions.network?rc=6YDJVJMT" class="project-link" target="_blank">Join Now</a>
+                <div class="ref-code">
+                    <span class="ref-label">Referral Code:</span>
+                    <span>6YDJVJMT</span>
+                    <button class="copy-btn" onclick="copyToClipboard('6YDJVJMT')">Copy</button>
+                </div>
+            </div>
+        </div>
+        
+        ?
+        
+        <div class="section-divider" id="apps">
+            <span>Applications</span>
+        </div>
+        
+        <div class="projects-grid">
+        
+            <!-- App 1 -->
+            <div class="project-card" style="--order: 1; opacity: 1;">
+                <h3 class="project-title"><i class="fas fa-wallet"></i> ARI WALLET</h3>
+                <p class="project-desc">
+<p><h1>What is AriWallet?</p></h1>
+Introducing AriWallet - the official digital asset management app for Arichain, an innovative DRPoS blockchain platform. Designed to break down barriers in the crypto world, Arichain Wallet offers a unique email login feature making blockchain technology accessible to everyone.
+
+
+<p><h2>Key Features:</p></h2>
+∙ Email Login: Access your wallet effortlessly using your email address - no need to remember complex seed phrases.
+∙ Secure Asset Management: State-of-the-art security protects your digital assets while maintaining user-friendly access.
+∙ Easy Transfers: Send and receive ARI ecosystemʼs tokens with just a few taps.
+∙ Real-time Balance Updates: Instantly view your token holdings and their current value.
+∙ Transparent Transaction History: Easily track and manage all your transactions.
+
+
+Arichain Wallet combines the security of blockchain with the convenience of traditional logins. Whether you're a crypto novice or an experienced user, our wallet provides a smooth, secure, and user-friendly experience.
+
+Experience the future of blockchain - where cutting-edge technology meets everyday usability. Download Arichain Wallet now and join the blockchain revolution with just your email</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-mobile"></i> Android</span>
+                    <span><i class="fas fa-coins"></i> 50 Points</span>
+                </div>
+                <a href="https://arichain.com/wallet/member/signup" class="project-link" target="_blank">Register Now</a>
+                <a href="https://play.google.com/store/apps/details?id=arichain.app.ari.wallet" class="project-link" target="_blank">Android Play Store</a>
+                <a href="https://apps.apple.com/us/app/ari-wallet/id6504207160" class="project-link" target="_blank" style="margin-top: 10px;">iOS App Store</a>
+                <div class="ref-code">
+                    <span class="ref-label">Referral Code:</span>
+                    <span>681ce4cf2f368</span>
+                    <button class="copy-btn" onclick="copyToClipboard('681ce4cf2f368')">Copy</button>
+                </div>
+            </div>
+            
+            <!-- App 2 -->
+            <div class="project-card" style="--order: 2; opacity: 1;">
+                <h3 class="project-title"><i class="fas fa-wallet"></i> XENEA WALLET</h3>
+                <p class="project-desc">Let’s get involved in bootstrapping the millennium infrastructure!</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-globe"></i> Web App</span>
+                    <span><i class="fas fa-coins"></i> Register with Refferal link to Get 1000 Points</span>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <a href="https://xenea.app/register/15t6SZU7w6" class="project-link" target="_blank">Register Now</a>
+                <a href="https://play.google.com/store/apps/details?id=com.xenea.wallet&hl=en-US" class="project-link" target="_blank">Android Play Store</a>
+                <a href="https://apps.apple.com/us/app/xenea-wallet/id6636520027" class="project-link" target="_blank" style="margin-top: 10px;">iOS App Store</a>
+                <div class="ref-code">
+                    <span class="ref-label">Referral Code:</span>
+                    <span>15t6SZU7w6</span>
+                    <button class="copy-btn" onclick="copyToClipboard(':15t6SZU7w6')">Copy</button>
+                </div>
+            </div>
+        
+            <!-- App 3 -->
+            <div class="project-card" style="--order: 3; opacity: 1;">
+                <h3 class="project-title"><i class="fas fa-tower-observation"></i> STARTOWER</h3>
+                <p class="project-desc">Let’s get involved in bootstrapping the millennium infrastructure!</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-globe"></i> App</span>
+                    <span><i class="fas fa-coins"></i> Hight Reward</span>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="https://interactive.startower.fr/#/?invitcode=xtec9s" class="project-link" target="_blank">Join Now</a>
+                <a href="https://play.google.com/store/search?q=star%20tower&c=apps&hl=en-US" class="project-link" target="_blank">Android Play Store</a>
+                <div class="ref-code">
+                    <span class="ref-label">Referral Code:</span>
+                    <span>xtec9s</span>
+                    <button class="copy-btn" onclick="copyToClipboard('xtec9s')">Copy</button>
+                </div>
+            </div>
+
+            <!-- App 4 -->
+            <div class="project-card" style="--order: 4; opacity: 1;">
+                <h3 class="project-title"><i class="fas fa-wallet"></i> INTERLINK NETWORK</h3>
+                <p class="project-desc">
+<p><h1>What is InterLink Network?</p></h1>
+We are building a Trusted Human Network that leverages Proof of Humanity, advanced AI, ZK (Zero-Knowledge) proof, and biometric verification to enable secure identity authentication. With a human-centric design, we prioritize individual rights, privacy, and autonomy, ensuring full control over identities in a transparent, trustworthy environment.
+
+<h3>InterLink Network</h3>, built on the InterLink ID platform, redefines Web3 accessibility with secure face recognition, making your face the key to seamless authentication. Key features include: InterLink ID Sign Up/ Log in, InterLink Network Numbers, Mini Apps, Airdrop & Rewards, Referral Program, News & Updates, etc.
+inscription/connexion à l'ID InterLink, numéros de réseau InterLink, mini-applications, Airdrop et récompenses, programme de parrainage, actualités et mises à jour, etc.</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-globe"></i> Web App</span>
+                    <span><i class="fas fa-coins"></i> 0.5HHP For Augmente Et Speed Maining 
+                    AND Enter Refferal Code To Get 1000 Points</span>
+                </div>
+                <a href="https://interlinklabs.ai/referral?refCode=92621777" class="project-link" target="_blank">Register Now</a>
+                <a href="https://play.google.com/store/apps/details?id=org.ai.interlinklabs.interlinkId" class="project-link" target="_blank">Android Play Store</a>
+                <a href="https://apps.apple.com/us/app/interlink-network/id6737988220" class="project-link" target="_blank" style="margin-top: 10px;">iOS App Store</a>
+                <div class="ref-code">
+                    <span class="ref-label">Referral Code:</span>
+                    <span>92621777</span>
+                    <button class="copy-btn" onclick="copyToClipboard('92621777')">Copy</button>
+                </div>
+            </div>
+
+            <!-- App 5 -->
+            <div class="project-card" style="--order: 5; opacity: 1;">
+                <h3 class="project-title"><i class="fas fa-wallet"></i> RUBI</h3>
+                <p class="project-desc">inscription/connexion à l'ID InterLink, numéros de réseau InterLink, mini-applications, Airdrop et récompenses, programme de parrainage, actualités et mises à jour, etc.</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-globe"></i> Web App</span>
+                    <span><i class="fas fa-coins"></i> Reward:Increase Mining Speed And Rate</span>
+                </div>
+                <a href="https://rubi.click/join/AMINERUBI" class="project-link" target="_blank">Register Now</a>
+                <a href="https://play.google.com/store/apps/details?id=com.nemoholding.android.rubi" class="project-link" target="_blank">Android Play Store</a>
+                <a href="https://apps.apple.com/vn/app/rubi/id1618046567?l=vi" class="project-link" target="_blank" style="margin-top: 10px;">iOS App Store</a>
+                <div class="ref-code">
+                    <span class="ref-label">Referral Code:</span>
+                    <span>AMINERUBI</span>
+                    <button class="copy-btn" onclick="copyToClipboard('AMINERUBI')">Copy</button>
+                </div>
+            </div>
+
+            <!-- App 6 -->
+            <div class="project-card" style="--order: 3; opacity: 1;">
+                <h3 class="project-title"><i class="fas fa-cubes"></i> BLOCKDAG X1</h3>
+                <p class="project-desc">Next-gen blockchain platform with DAG architecture and mobile mining</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-mobile"></i> iOS/Android</span>
+                    <span><i class="fas fa-coins"></i> Reward:Increase Mining Speed And Rate</span>
+                </div>
+                <a href="https://apk.blockdagnetwork.io/BlockDAGv1.5.apk" class="project-link" target="_blank">Android APK</a>
+                <a href="https://apps.apple.com/us/app/blockdag-x1/id6503609082" class="project-link" target="_blank" style="margin-top: 10px;">iOS App Store</a>
+                <div class="ref-code">
+                    <span class="ref-label">Referral Code:</span>
+                    <span>sECJ8dbB</span>
+                    <button class="copy-btn" onclick="copyToClipboard('sECJ8dbB')">Copy</button>
+                </div>
+            </div>
+               </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ????? ?????? -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#apps">Applications</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">How to Participate</a></li>
+                    <li><a href="#">Rewards System</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Connect With Us</h3>
+                <p>Join our community for updates and support:</p>
+                <div class="social-links">
+                    <a href="https://t.me/AmineMhamdi_21692621777" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a href="https://x.com/1_mhamdi64474" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/aminemhamdi123" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+                
+                <div style="margin-top: 20px;">
+                    <p>Developer: <a href="https://t.me/AmineMhamdi_21692621777" style="color: var(--secondary);">@Amine Mhamdi</a></p>
+                    <p>Channel: <a href="https://t.me/AmineMhamdi_21692621777" style="color: var(--secondary);">@Amine Mhamdi</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copy-right">
+            &copy; 2025  Network. All rights reserved.
+            
+        </div>
+    </footer>
+    
+    <!-- ?? ????? ????? -->
+    <div class="lang-switcher">
+        <button class="lang-btn" id="langBtn">EN</button>
+    </div>
+    
+    <script>
+        // ??? ????? ???????
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Copied to clipboard: ' + text);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+        
+        // ????? ?? ????????
+        const searchInput = document.querySelector('.search-input');
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            projectCards.forEach(card => {
+                const title = card.querySelector('.project-title').textContent.toLowerCase();
+                const desc = card.querySelector('.project-desc').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || desc.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+        
+        // ????? ?????
+        const langBtn = document.getElementById('langBtn');
+        let currentLang = 'en';
+        
+        langBtn.addEventListener('click', () => {
+            if (currentLang === 'en') {
+                document.body.dir = 'rtl';
+                langBtn.textContent = 'AR';
+                currentLang = 'ar';
+                // ??? ????? ????? ?????? ?? ????????? ???? ???????
+            } else {
+                document.body.dir = 'ltr';
+                langBtn.textContent = 'EN';
+                currentLang = 'en';
+                // ??? ????? ????? ????????? ???? ??????????
+            }
+        });
+        
+        // ??????? ?????? ??? ???????
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        projectCards.forEach(card => {
+            observer.observe(card);
+        });
+        
+        // ????? ????? ???????
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                alert('alert: Welcome to my personal website! Discover my best projects and boost your chances of success. Share with friends and dont forget to use my referral code for bonus rewards!');
+            }, 1000);
+        });
+    </script>
+
+</body></html>
